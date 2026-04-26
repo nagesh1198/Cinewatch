@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4ede2;
+  --foreground: #13251d;
+  --ink: #13251d;
+  --ink-soft: #405048;
+  --muted: #67726c;
+  --panel: rgba(255, 250, 242, 0.84);
+  --line: rgba(19, 37, 29, 0.12);
+  --accent-ink: #1d3a2b;
+  --accent-coral: #d7684d;
+  --accent-coral-soft: rgba(215, 104, 77, 0.12);
+  --accent-gold: #e9b24f;
+  --accent-gold-soft: rgba(233, 178, 79, 0.16);
+  --accent-teal: #4d8d87;
+  --accent-teal-soft: rgba(77, 141, 135, 0.14);
+  --accent-green: #32715a;
+  --soft-shadow: 0 24px 60px rgba(22, 31, 26, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  background:
+    radial-gradient(circle at top right, rgba(233, 178, 79, 0.18), transparent 25%),
+    radial-gradient(circle at left 30%, rgba(77, 141, 135, 0.12), transparent 28%),
+    var(--background);
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(215, 104, 77, 0.08), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(77, 141, 135, 0.1), transparent 24%),
+    linear-gradient(180deg, #f8f2e8 0%, #f4ede2 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), serif;
+}
+
+::selection {
+  background: rgba(215, 104, 77, 0.2);
+  color: var(--ink);
+}
